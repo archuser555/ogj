@@ -123,3 +123,32 @@
 .anim:hover {
   text-shadow: 1px 1px 20px;
 }
+
+img {
+  min-width: 20%;
+  min-height: 20%;
+  max-height: 50%;
+  max-width: 60%;
+}
+
+.container {
+  text-align: center;
+}
+
+img:hover {
+  animation: anim 1s;
+  max-width: 75%;
+}
+
+@keyframes anim {
+  0% {
+    max-width: 60%;
+  }
+  100% {
+    max-width: 75%;
+  }
+}
+
+.gg {
+  color: aliceblue;
+}

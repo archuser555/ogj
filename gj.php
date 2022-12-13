@@ -15,10 +15,20 @@
     </div>
 
 <ul>
-<li class="anim"><a href="#">Home</a></li>
-<li class="anim"><a href="#">About us</a></li>
-<li class="anim"><a href="#">Log in</a></li>
-<li class="anim"><a href="#"><strong>Sign up</strong></a></li>
+<li class="anim"><a href="./">Home</a></li>
+<li class="anim"><a href="./aboutus/">About us</a></li>
+<?php 
+include_once './api/isthiscookieinthedb.php';
+
+if($htuac = 0){
+echo "<li class='anim'><a href='./login/'>Log in</a></li>";
+echo "<li class='anim'><a href='./register/'><strong>Sign up</strong></a></li>";
+}
+else if($htuac = 1){
+  echo "<li class='anim'><a href='./login/'>Create Jam</a></li>";
+}
+
+?>
 </ul>
 <div class="menu-bars">
   <input type="checkbox">
@@ -27,7 +37,12 @@
 <span></span>
 </div>
 </nav>
-    
+
+<?php
+
+//show game jams details and join shit etc...
+
+?>
 
 <script src="./static/app.js"></script>
   </body>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" width="device-width, initial-scale=1">
-	<title>Cecar: login</title>
+	<title>OJG: register</title>
 
 	<link rel="stylesheet" type="text/css" href="../static/style2.css" />
 </head>
@@ -15,18 +15,19 @@
 				
 			</div>
 			<div class="login-form">
-				<form action="../api/auth.php" method="POST">
+				<form action="../api/users.php" method="POST">
 					<div class="top">						
 						<input type="text" name="username" id="uname" placeholder="Username">
-						<input type="password" name="password" id="pass" placeholder="password">
+						<input type="email" name="email" placeholder="E-Mail">
+						<input type="password" name="password" id="pass" placeholder="Password">
 					</div>
 					<div class="bottom">						
-						<div><input type="submit" name="submitbtn" value="Login"></div>
+						<div><input type="submit" name="submitbtn" value="register" onclick="register()"></div>
 					</div>
 				</form>
-
+<!-- aa!-->
 				<div class="footer">
-					<a href="../register/" class="left">Register</a>
+					<a href="../login/" class="left">Login</a>
 					<a href="#" class="right">About us</a>
 					<a href="../index.html" class="right">Home</a>
 				</div>

@@ -3,7 +3,7 @@
 $server = "localhost";
 $db_username = "root";
 $db_password = "";
-$database = "cecar";
+$database = "cecar2";
 $userid = 1;
 $jamid = 1;
 

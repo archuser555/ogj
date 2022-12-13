@@ -34,29 +34,20 @@ body {
 	transform: translate(-50%, -50%);
 	display: flex;
 	flex-wrap: nowrap;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: center;
 }
 
-.login .left-placeholder {
-	width: 50%;
-	height: 320px;
-	background: url(../img/console.png);
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	border-radius: 15px 0px 0px 15px;
-}
 
 .login .login-form {
 	width: 50%;
-	height: 320px;
+	height: 400px;
 	padding: 50px 65px 0px;
 	background: #fff;	
-	border-radius: 0px 15px 15px 0px;
+	border-radius: 15px 15px 15px 15px;
 }
 
-.login .login-form form .top input {
+.login .login-form  .top input {
 	display: inline-block;
 	width: 100%;
 	margin-bottom: 15px;
@@ -69,12 +60,12 @@ body {
     letter-spacing: 1.5px;
 }
 
-.login .login-form form .top input:focus {
+.login .login-form .top input:focus {
 	border-bottom: 2px solid #FFA07A;
     color: #FFA07A;
 }
 
-.login .login-form form .bottom input {
+.login .login-form .bottom input {
 	display: inline-block;
 	width: 100%;
 	border: none;
@@ -82,7 +73,7 @@ body {
 	padding: 15px 0px;
 	cursor: pointer;
 	border-radius: 50px;
-	background: #332f63;
+	background: #C0552A;
 	color: #fff;
 	font-size: 14px;
 	font-weight: bold;
@@ -91,9 +82,9 @@ body {
 	transition-property: box-shadow, background;
 }
 
-.login .login-form form .bottom input:hover {
+.login .login-form .bottom input:hover {
 	/*background: #FFA07A;*/
-	box-shadow: inset 174px 0px 0px #FFA07A;
+	box-shadow: inset 174px 0px 0px #07cc00;
 }
 
 .login .login-form .footer {
@@ -108,7 +99,7 @@ body {
 	text-decoration: none;
 	font-size: 14px;
 	font-weight: bold;
-	color: #332f63;
+	color: #C0552A;
 	position: relative;
 }
 
@@ -118,7 +109,7 @@ body {
 
 .login .login-form .footer a:nth-child(2)::after {
 	content: "";
-    border: 1px solid #0033CC;
+    border: 1px solid #07cc00;
     position: absolute;
     top: 0;
     right: -24px;
@@ -128,7 +119,7 @@ body {
 
 .login .login-form .footer a:nth-child(2)::before {
 	content: "";
-    border: 1px solid #0033CC;
+    border: 1px solid #07cc00;
     position: absolute;
     top: 0;
     right: 53px;
@@ -149,19 +140,8 @@ body {
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
-
-	.login .left-placeholder {
-		width: 400px;
-		height: 50%;
-		border-radius: 15px 15px 0px 0px;
-	}
-
-	.login .login-form {
-		width: 400px;
-		height: 50%;	
-		border-radius: 0px 0px 15px 15px;
-	}
-	.login .login-form form .bottom input:hover {
+	
+	.login .login-form .bottom input:hover {
 		box-shadow: inset 225px 0px 0px #FFA07A;
 	}
 }

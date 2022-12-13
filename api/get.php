@@ -2,26 +2,24 @@
 
 include_once 'config.php';
 
-$queries = array();
-parse_str($_SERVER['QUERY_STRING'], $queries);
-
-if (isset($queries['userid']) && isset($queries['jamid']) != true){
-    $userid = mysqli_real_escape_string($conn, $queries['userid']);
+if (isset($_POST['userid'])){
+    $userid = mysqli_real_escape_string($conn, $_POST['userid']);
 
     $sql = "SELECT * FROM users where id = '$userid'";
 
     $result = mysqli_query($conn,$sql);
 
     $a = mysqli_fetch_assoc($result);
-    $a['password'] = "0";
+    $a['password'] = "secret";
+    $a['email'] = "secret";
 
     echo json_encode($a);
     mysqli_free_result($result);
     mysqli_close($conn);
 }
 
-elseif (isset($queries['userid']) != true && isset($queries['jamid'])){
-    $jamid = mysqli_real_escape_string($conn, $queries['jamid']);
+elseif (isset($_POST['jamid'])){
+    $jamid = mysqli_real_escape_string($conn, $_POST['jamid']);
 
     $sql = "SELECT * FROM users where id = '$jamid'";
 
